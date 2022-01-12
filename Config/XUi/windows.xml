@@ -1,0 +1,15 @@
+<configs>
+
+	<append xpath="/windows">
+
+		<window anchor="LeftCenter" name="windowPowerManagerAdmin" visible="true">
+			<rect pos="0,280" width="276" height="496">
+				<sprite depth="8" color="[black]" />
+				<label depth="10" pos="8,-8" width="260" height="480"
+					   font_size="14" text="{status}" color="[white]" />
+			</rect>
+		</window>
+
+	</append>
+
+</configs>

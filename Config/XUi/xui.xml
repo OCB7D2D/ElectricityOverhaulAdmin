@@ -1,0 +1,9 @@
+<configs>
+
+	<append xpath="/xui/ruleset[@name='default']">
+		<window_group name="powerManagerAdmin" actionSet="false" controller="XUiC_PowerManagerAdmin, ElectricityOverhaulAdmin">
+			<window name="windowPowerManagerAdmin" />
+		</window_group>
+	</append>
+
+</configs>
