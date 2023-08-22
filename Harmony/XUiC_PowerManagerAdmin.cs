@@ -26,12 +26,12 @@ public class XUiC_PowerManagerAdmin : XUiController
 
     private string RenderStatus()
     {
-        if (!PowerManager.HasInstance) return "[na]";
-        OcbPowerManager manager = (OcbPowerManager)PowerManager.Instance;
+        if (!PowerManagerBase.HasInstance) return "[manager not found]";
+        OcbPowerManager manager = (OcbPowerManager)PowerManagerBase.Instance;
         string status = "Grids: " + manager.Grids.Count.ToString() + "\n";
         for (int i = 0; i < manager.Grids.Count; i += 1)
         {
-            PowerSource grid = manager.Grids[i];
+            OcbPowerSource grid = manager.Grids[i];
             int avg = (int)(grid.AvgTime * 1000);
             status += i.ToString() + ") avg: " + avg.ToString() + "ns";
             status += ", sources: " + grid.PowerSources.Count.ToString();

@@ -3,14 +3,14 @@
 public class ConsoleCmdPowerManager : ConsoleCmdAbstract
 {
 
-    public override string[] GetCommands() => new string[1]
+    protected override string[] getCommands() => new string[1]
     {
         "pm"
     };
 
-    public override string GetDescription() => "Control weather settings";
+    protected override string getDescription() => "Control weather settings";
 
-    public override string GetHelp() => "show|hide\n";
+    protected override string getHelp() => "show|hide\n";
 
     public override void Execute(List<string> _params, CommandSenderInfo _senderInfo)
     {
